@@ -1,18 +1,13 @@
 #include <stdio.h>
 
-void print_before_main(void) __attribute__((constructor));
+void first(void) __attribute__((constructor));
 
 /**
- * print_before_main - prints a sentence before the main function is executed
+ * first - prints a sentence before the main
+ * function is executed
  */
-void print_before_main(void)
+void first(void)
 {
-    printf("You're beat! and yet, you must allow,\n");
-    printf("I bore my house upon my back!\n");
-}
-
-int main(void)
-{
-    /* Your main function code here */
-    return 0;
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
